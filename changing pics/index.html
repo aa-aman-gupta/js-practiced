@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      body{
+        background-color: rgb(64, 150, 121);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://picsum.photos/id/140/300/300" id="mainImg" alt="" />
+      <div class="btn">
+        <button onclick="back()" id="pre">previous Image</button>
+        <button onclick="go()" id="nxt">Next Image</button>
+        <script>
+          let img = document.getElementById("#img");
+          let pre = document.getElementById("#pre");
+          let nxt = document.getElementById("#nxt");
+          let num = 0;
+
+          function back() {
+            mainImg.setAttribute("src", `images${--num}.jpg`);
+            mainImg.setAttribute("width", 400);
+            // console.log("prevous done")
+          }
+
+          function go() {
+            mainImg.setAttribute("src", `images/${++num}.jpg`);
+            mainImg.setAttribute("width", 400);
+            // console.log("nxt done")
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

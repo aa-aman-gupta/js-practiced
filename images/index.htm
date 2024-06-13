@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change image y click</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .btn {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      button {
+        margin-top: 10px;
+        padding: 3px 5px;
+        gap: 10px;
+      }
+      img {
+        width: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://picsum.photos/id/140/300/300" id="img" alt="image" />
+      <!-- <img src="images/1.jpg" id="img" alt="image" /> -->
+      <div class="btn">
+        <!--  <button id="pre">Previous</button>
+        <button id="nxt">Next</button> -->
+        <button onclick="one()" id="pre">Previous</button>
+        <button onclick="two()" id="nxt">Next</button>
+      </div>
+    </div>
+    <script>
+      let img = document.getElementById("img");
+      let pre = document.getElementById("pre");
+      let nxt = document.getElementById("nxt");
+      let num = 1;
+      /*  addEventListener("click", () => {
+          console.log("clicked");
+          // img.setAttribute("src", `https://picsum.photos/id/${++num}/300/300`);
+          pre.setAttribute("src",`https://picsum.photos/id/${++num}/300/300`)
+          nxt.setAttribute("src",`https://picsum.photos/id/${--num}/300/300`)
+
+        }); */
+
+      function one() {
+        img.setAttribute("src", `images/${--num}.jpg`);
+        // img.setAttribute("src", `https://picsum.photos/id/${--num}/300/300`);
+        console.log("print1");
+      }
+      function two() {
+        console.log("print2");
+        // img.setAttribute("src", `https://picsum.photos/id/${++num}/300/300`);
+        img.setAttribute("src", `images/${++num}.jpg`);
+        img.setAttribute("width", 800);
+      }
+    </script>
+  </body>
+</html>
