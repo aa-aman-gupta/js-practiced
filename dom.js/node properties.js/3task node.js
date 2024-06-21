@@ -11,7 +11,9 @@
 // let myBody=Document.body;
 // myBody.innerHTML=' <    '
 
-let str="hello";
-console.log(typeof str);
-let a=str+1;
-console.log(typeof a)
+let str = "hello";
+// console.log(typeof str);
+str = 1;
+console.log(typeof str)
+
+// console.log(typeof a)

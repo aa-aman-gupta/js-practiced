@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COLOR PICKER | JS</title>
+  </head>
+  <body>
+    <form action="#">
+      Choose Your Fav Color
+      <input
+        type="color"
+        name="Color"
+        id="color"
+        onchange="changeColor"
+      />
+    </form>
+    <script>
+      function changeColor() {
+        // Get the selected color
+        let selectedColor = document.getElementById("color").value;
+        // Change the background color of the body
+        document.body.style.backgroundColor = selectedColor;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STYLE & CLASSES</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .notification {
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Notification is on the right</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, culpa
+      rem. Atque, cumque alias nesciunt, autem amet, sapiente mollitia dolorum
+      repellat architecto fugit velit quasi quae perspiciatis vel! Iusto eaque
+      et alias laudantium doloribus! Quaerat numquam neque vel quam. Nemo natus
+      quos ab vitae fugit incidunt pariatur repellendus praesentium eum rem
+      voluptatibus deleniti id consequatur impedit deserunt ratione, nihil error
+      atque reiciendis maxime perferendis expedita provident debitis tempore?
+      Totam saepe dignissimos a amet doloremque magni facere vero suscipit
+      veniam rerum quas, praesentium dicta veritatis aliquid neque adipisci
+      velit! Non ea architecto necessitatibus dolorum aspernatur veniam magnam,
+      possimus quia deserunt unde?
+    </p>
+
+    <script>
+      function showNotification({ top, right, className, html }) {
+        let notification = document.createElement("div");
+        notification.className = "notification";
+        if (className) {
+          notification.classList.add("notification");
+        }
+        notification.style.top = top + "px";
+        notification.style.right = right + "px";
+        notification.style.background = `green`;
+        notification.innerHTML = html,
+         document.body.append(notification);
+        setTimeout(() => notification.remove(), 1500);
+      }
+
+      let i = 1;
+      setInterval(() => {
+        showNotification({
+          top: 10,
+          right: 10,
+          html: "Hello" + i++,
+          class: "welcome",
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>

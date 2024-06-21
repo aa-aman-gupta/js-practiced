@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=Device-width, initial-scale=1.0" />
+    <title>Element Scrolling | Js Practice</title>
+    <style>
+      * {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main style="position: relative" id="main">
+      <article>
+        <div
+          id="exam"
+          style="
+            background-color: aqua;
+            left: 232px;
+            right: 33px;
+            position: absolute;
+            height: 100px;
+            width: 200px;
+          "
+        ></div>
+      </article>
+    </main>
+    <script>
+      alert(exam.offsetParent.id);
+      alert(exam.offsetLeft);
+      alert(exam.offsetRight);
+    </script>
+  </body>
+</html>
